@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- we can run javascript code inside a html code to do that we use <script>javascript code</script> -->
+<!-- we usually put the script element at the bottom of a body element,we want webpage to be created first 
+    then use javascript to make it interactive-->
+
+<style>
+    button {
+        background-color: red;
+        color: white;
+        border: none;
+    }
+</style>
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <button title="tooltip" onclick="
+            alert('Good Job');
+          ">
+            hello
+        </button>
+        <p>paragraph of <button>hello</button> text</p>
+
+
+        <script>
+          // runs first when the page is loaded
+          // this code creates a popup
+          alert('hello');
+
+          // the result of console.log will appaer in console 
+          console.log(2+2);
+        </script>
+    </body>
+
+</html>
