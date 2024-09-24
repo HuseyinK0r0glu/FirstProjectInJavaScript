@@ -21,21 +21,21 @@
 			</button>
 
 			<button onclick="
-				quantity = quantity + 1;
+				quantity++;
 				console.log(`Cart quantity: ${quantity}`);
 			">
 				Add to Cart 
 			</button>
 
 			<button onclick="
-				quantity = quantity + 2;
+				quantity += 2;
 				console.log(`Cart quantity: ${quantity}`);
 			">
 				+2
 			</button>
 
 			<button onclick="
-				quantity = quantity + 3;
+				quantity += 3;
 				console.log(`Cart quantity: ${quantity}`);
 			">
 				+3
@@ -44,12 +44,16 @@
 			<button onclick="
 				console.log('Cart was reset.')
 				quantity = 0;
-				console.log(`Cart quantity: ${quantity}`);
+				console.log(`Cart quantity: ${quantity}`); 	
 			">
 				Reset card
 			</button>
 
 			<script>
+				
+				// if a variable is not going to change we declare is with const 
+				// if we are going to change a varible later we assign it with let
+
 				let quantity = 0;
 			</script>
 
