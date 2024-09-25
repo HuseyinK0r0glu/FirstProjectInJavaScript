@@ -13,6 +13,7 @@
         <script>
             // == eaual to but it converts two elements into same type 
             // === equal to   it does not convert elemnts into same type compare directly we use mostly this 
+            // the logic above is same for != and !==
             // !== not equal to 
             // <= less than or equal to 
             // >= greater than or equal to 
@@ -20,8 +21,39 @@
             console.log(5 === '5'); // it gives false
             console.log(5 == '5');  // it gives true
 
+            // if statements
+            if(true) {
+                console.log('hello');
+            } else {
+                 console.log('else');
+            }
+
+            let variable1;
+            // result will be undefined
+            console.log(variable1);
 
 
+            //both of the below are same
+
+            true ? 'truthy' : 'falsy';
+
+            if(true){
+                'truthy'
+            }else {
+                'falsy'
+            }
+
+
+            // we can asign it to a result value
+            const result = true ? 'truthy' : 'falsy';
+            console.log(result);
+
+            // if first operator is falsy the guard operator will stop early and the result will be the first value   
+            // if first operator is ttruthy value it will not stop early and give the second result as a result     
+            const message = false && 'hello';   
+
+            // with || operator the logic is similiar 
+            
         </script>
     </body>
 
