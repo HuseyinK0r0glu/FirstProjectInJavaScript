@@ -11,13 +11,13 @@
     <body>
 
         <script>    
-           
+           /*
             const product = {
                 name: 'socks',
                 price:1090
             };
 
-            // it will give Object
+            // it will give object
             console.log(typeof product);
             console.log(product);
             console.log(product.name);
@@ -29,6 +29,62 @@
             // delete a property from an object
             delete product.newProperty;
             console.log(product);
+            */
+
+            const product2 = {
+                name: 'shirt',
+                // brackets are optional here we can say 'delivery_time'
+                ['delivery-time']: '1 day',
+                rating : {
+                    stars:4.5,
+                    count:87
+                },
+
+                // function inside of an object === method 
+                fun : function function1(){
+                    console.log('function inside object');
+                }
+            };
+
+            // dot notation
+            console.log(product2.name);
+
+            // we can also access a value inside an object by using ['']
+            // bracket notation
+            // bracket notation lets us use properties that don't work with dot notation 
+            // for instance we have delivery-time we can access this with dot notation because javascript thinks dash is minus sign
+            // but we use bracket notation it gives us undefined     
+            console.log(product2['name']);
+
+            console.log(product2.rating.stars);
+
+            product2.fun();
+
+            // we use JSON we send data between computers and also when we store data
+            // JSON does not support functions
+            // stringify(the object that we want to convert) is a method of the JSON object
+            // type of JSON.stringify(product2) is string
+
+            // to convert javascript object to JSON
+            console.log(JSON.stringify(product2));
+
+            const jsonstring = JSON.stringify(product2);
+
+            // to convert JSON to javascript object
+            // JSON.parse is to convert JSON to javascript object
+            console.log(JSON.parse(jsonstring));
+
+            // variables get deleted when we refresh the page 
+            // localStorage does not get deleted when we refresh the page 
+
+            // to save a value inside localStorage we use setItem(name,value)
+            // localStorage only supports strings 
+
+            localStorage.setItem('message','hello');
+
+            // to get the value inside of a localStorage we use getItem(name)
+
+            console.log(localStorage.getItem('message'));
 
         </script>
     </body>
