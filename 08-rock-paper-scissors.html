@@ -41,17 +41,23 @@
           score.wins = 0;
           score.losses = 0;
           score.ties = 0;
+          localStorage.removeItem('score');
         ">
           Reset Score
         </button>
 
         <script>
 
-          const score = {
-            wins:0,
-            losses:0,
-            ties:0
-          };
+          let score = JSON.parse(localStorage.getItem('score'));
+
+          // if score is null
+          if(!score){
+            score = {
+              wins : 0,
+              losses : 0,
+              ties : 0
+            };
+          }
 
           // if we define a variable in a function we can't access it from everywhere but
           // if we define it in <script> element it would be global variable and we can access from everywhere
@@ -94,6 +100,9 @@
             }else if (result === 'Tie.'){
               score.ties++;
             }
+
+            // localStorage only supports string so we have to convert score object to JSON 
+            localStorage.setItem('score',JSON.stringify(score));
 
             alert(`You picked ${ourMove}. Computer picked ${computerMove}. ${result} \nWins:${score.wins},Losses:${score.losses},Ties:${score.ties}`)
           }
