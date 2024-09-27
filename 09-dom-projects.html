@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    
+<html>
+
+    <head>
+        <title>
+            DOM Projects
+        </title>
+    </head>
+
+    <body>
+        
+        <p>
+            YouTube Subscribe Button
+        </p>
+
+        <button style = "
+
+            font-weight: 700;
+            background-color : black;
+            color : white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border:none;
+            cursor: pointer;
+            margin-bottom: 35px;
+            
+        "  onclick="subscribe()" class="js-subscribe-button">
+            Subscribe
+        </button>
+
+        <p>
+            Rock Paper Scissors
+        </p>
+
+        <p>
+            Amazon Shipping Calculator
+        </p>
+        <p>
+            Orders under $40 = +$10 shipping.
+        </p>
+        <p>
+            Orders over $40 = FREE shipping.
+        </p>
+
+
+        <script> 
+
+            function subscribe() {
+                const buttonElement = document.querySelector('.js-subscribe-button');
+            
+                if(buttonElement.innerText === 'Subscribe'){
+                    buttonElement.innerText = 'Subscribed';
+                }else{
+                    buttonElement.innerText = 'Subscribe';
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
