@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <!-- DOM == doucment object model-->
+<html>
+
+    <head>
+        <title>
+            DOM
+        </title>
+    </head>
+
+    <body>
+
+        <button>Hello</button>
+        <!-- class attribute adds a label to our element-->
+        <!-- to start the class name with js is common use it means this is used in javascript-->
+        <button class="js-button">Second Button</button>
+
+        <script> 
+
+            // document.querySelector() lets us get any element from the page andput it inside javascript
+            // for instance this will get the first button it encounters
+            console.log(document.querySelector('button'));
+            console.log(document.querySelector('button').innerHTML);
+            document.querySelector('button')
+                .innerHTML = 'Changed';
+
+            // when we start with a dot it will look for a class
+            // class selector 
+
+            const buttonElement = document.querySelector('.js-button');
+            console.log(buttonElement);
+        
+            /*
+            // we can have HTML elements inside javascript by document
+
+            console.log(document.title);
+
+            // when we access an HTML elements via document it is javascript object now 
+            console.log(document.body);
+            // it gives object
+            console.log(typeof document.body);
+
+            console.log(document.body.innerHTML);
+            document.body.innerHTML = '<button>Good Job</button>';
+
+            */
+
+            /*
+            // document object is a built-in object provided by javascript
+            // document object is linked to the web page 
+            // docuemnt object represents or models the webpage
+            // we can use the document object to retrieve, modify, or interact with HTML elements on a page
+
+            document.body.innerHTML = 'hello';
+            document.title = 'Good Job';
+            */
+
+        </script>
+    </body>
+
+</html>
