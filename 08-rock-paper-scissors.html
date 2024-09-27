@@ -48,16 +48,25 @@
 
         <script>
 
-          let score = JSON.parse(localStorage.getItem('score'));
+          // default operator 
+          // if the left side is truthy we will use the left side as score or 
+          // if the left side is falsy that is null we will use right side as score 
+          let score = JSON.parse(localStorage.getItem('score')) || {
+              wins : 0,
+              losses : 0,
+              ties : 0
+            };
 
-          // if score is null
-          if(!score){
+            // it does the same thing as the code block above 
+          /*
+          if(!score) {
             score = {
               wins : 0,
               losses : 0,
               ties : 0
             };
           }
+          */ 
 
           // if we define a variable in a function we can't access it from everywhere but
           // if we define it in <script> element it would be global variable and we can access from everywhere
