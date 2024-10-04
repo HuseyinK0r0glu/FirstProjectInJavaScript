@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    
+<html>
+
+    <head>
+        <title>
+            Arrays And Loops
+        </title>
+
+    </head>
+
+    <body>
+        <script> 
+            const myArray = [10,20,30];
+            console.log(myArray);
+            console.log(myArray[0]);
+
+            // we can put different type of values
+            // an array is an object but it is a speacial type of object
+
+            // to really see if is something is specifically an array
+            // returns true 
+            console.log(Array.isArray(myArray));
+
+            console.log(myArray.length);
+
+            // .push() adds a value end of the array
+            myArray.push(100);
+            console.log(myArray);
+
+            // removes a value from an array
+            // it takes two values first one is the starting index,second one is determines how many values we want to remove from our array starting from starting index   
+            myArray.splice(0,1);
+            console.log(myArray);
+
+        </script>
+    </body>
+
+</html>
