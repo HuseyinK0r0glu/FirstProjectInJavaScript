@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    
+<html>
+
+    <head>
+        <title>
+            Advanced Functions
+        </title>
+
+    </head>
+
+    <body>
+        <script> 
+
+            // functions are variables
+            const function1 = function greeting() {
+                console.log('hello');
+            };
+
+            // the function name is not needed 
+            // this function is anonymous function
+
+            const function2 = function(){
+                console.log('World');
+            }
+
+            console.log(function1);
+            function1();
+            function2();
+
+            // setTimeout is a build in parameter first parameter is a function we want to run in the future 
+            // second paramter is how long to wait before running this function in miliseconds
+
+            setTimeout(function () {
+                console.log('timeout');
+            }, 3000 );
+
+        </script>
+    </body>
+
+</html>
