@@ -48,6 +48,7 @@
             }
             */
 
+            /*
             const todoList = [
                 'make dinner',
                 'wash dishes',
@@ -58,7 +59,23 @@
             for(let i = 0;i<todoList.length;i++){
                 console.log(todoList[i]);
             }
+            */
 
+            // arrays are references
+            // if we want to create different arrays we can use .slice()
+            const array1 = [1,2,3];
+            const array2 = array1;
+            const array3 = array1.slice();
+            array2.push(4);
+            console.log(array1);
+            console.log(array2);
+            console.log(array3);
+
+            // Destructuring 
+            // to get a value from inside of an array and put it in a variable
+            const [firstValue,secondValue] = [1,2];
+            console.log(firstValue);
+            console.log(secondValue);
 
         </script>
     </body>
